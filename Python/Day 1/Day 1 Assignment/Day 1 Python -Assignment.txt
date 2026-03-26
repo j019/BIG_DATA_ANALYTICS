@@ -1,0 +1,54 @@
+Day 1 Python -Assignment
+========================
+
+H:\Python\Day 1>python HelloWorld.py
+Hello World!!
+
+H:\Python\Day 1>python Name.py
+Enter Name : Jatin
+Welcome  Jatin
+
+
+H:\Python\Day 1>python swap.py
+Enter Number 1: 21
+Enter Number 2: 31
+After Swapping Number are : 31 21
+
+H:\Python\Day 1>python arithmatic.py
+Enter Number 1: 25
+Enter Number 2: 5
+Addition:  30
+Subtraction:  20
+Multiply:  125
+Divison:  5.0
+power:  9765625
+Floor Divison:  5
+Modulus:  0
+
+H:\Python\Day 1>python circle.py
+Enter Radius: 7
+Area of circle:  69.0172
+Circumference:  43.96
+
+
+H:\Python\Day 1>python rectangle.py
+Enter length: 23
+Enter breadth: 32
+Area of Rectangle:  736
+perimeter of Rectangle:  110
+
+H:\Python\Day 1>python persondetail.py
+Enter Name: Jatin
+Enter Age: 27
+Enter Address: Pune
+Enter mobile: 9999999999999
+Jatin-27-Pune-9999999999999
+
+H:\Python\Day 1>python swapping3.py
+Enter Number 1: 21
+Enter Number 2: 32
+Enter Number 3: 43
+After Swapping Number are : 43 21 32
+
+H:\Python\Day 1>
+

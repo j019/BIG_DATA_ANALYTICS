@@ -1,0 +1,52 @@
+============
+python Day 1
+============
+
+C:\Users\HP>python
+Python 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a=5
+>>> a
+5
+>>> type(a)
+<class 'int'>
+>>> a="jatin"
+>>> a
+'jatin'
+>>> type(a)
+<class 'str'>
+>>> a=10
+>>> b=20
+>>> a,b=b,a
+>>> a
+20
+>>> b
+10
+>>> name=input("Enter name")
+Enter nameStudents
+>>> print("welcome ",name)
+welcome  Students
+>>> print("welcome ",input("Enter Name"))
+Enter NameStudents
+welcome  Students
+>>>
+>>> int(input("Enter Number 1: "))+int(input("Enter Number 2: "))
+Enter Number 1: 12
+Enter Number 2: 4
+16
+>>> ^Z
+
+
+C:\Users\HP>
+
+H:\Python>python first.py
+Hello World!!
+10 20 30
+10->20->30
+Hello World
+Enter Name : Jatin
+Welcome  Jatin
+
+	
+
+
