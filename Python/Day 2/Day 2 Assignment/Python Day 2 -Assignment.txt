@@ -1,0 +1,766 @@
+================================
+Python Day 2 -Assignment
+================================
+
+---------------------
+Conditional Statement
+---------------------
+
+Q1:
+n = int(input("enter the number: "))
+
+if n>0:
+    print("Number is +ve.")
+else:
+    print("Number is -ve.")
+	
+======== RESTART: H:/Python/Day 2/Day 2 Assignment/PositiveorNegative.py =======
+enter the number: 12
+Number is +ve.
+
+======== RESTART: H:/Python/Day 2/Day 2 Assignment/PositiveorNegative.py =======
+enter the number: -22
+Number is -ve.
+
+------------------------------------------------------------------
+Q2:
+marks1=int(input("Enter Marks for first subject: "))
+marks2=int(input("Enter Marks for second subject: "))
+marks3=int(input("Enter Marks for third subject: "))
+average = (marks1+marks2+marks3)/3
+match average:
+    case average if average > 90:
+        print("Distinction.")
+    case average if average>60 and average<=90:
+        print("First Class.")
+    case average if average >= 33 and average<=60:
+        print("Second class.")
+    case average if average < 33:
+        print("Fail.")
+    case _:
+        print("Invalid Input")
+		
+Enter Marks for first subject: 78
+Enter Marks for second subject: 80
+Enter Marks for third subject: 85
+First Class.
+
+--------------------------------------------------------------------
+
+Q3:
+number = input("Enter the number: ")
+
+result = int(number)+int(number+number)+int(number+number+number)
+
+print("Result of ",number," : ",result)
+
+
+
+Enter the number: 2
+Result of  2  :  246
+
+---------------------------------------------------------------------
+Q4:
+a= int(input("Enter first Number: "))
+b= int(input("Enter second Number: "))
+c= int(input("Enter third Number: "))
+
+if a>b and a>c:
+    print("first is greater: ",a)
+elif b>c:
+    print("second is greater: ",b)
+else:
+    print("third is greater: ",c)
+	
+========= RESTART: H:/Python/Day 2/Day 2 Assignment/NumberComparsion.py ========
+Enter first Number: 44
+Enter second Number: 33
+Enter third Number: 55
+third is greater:  55
+
+----------------------------------------------------------------------
+Q5:
+c = int(input("Enter temperature in Celsius: "))
+
+f = c*1.8+32
+
+print("Temperature in Farenheit: ",f)
+
+
+=========== RESTART: H:/Python/Day 2/Day 2 Assignment/Temperature.py ===========
+Enter temperature in Celsius: 32
+Temperature in Farenheit:  89.6
+
+-----------------------------------------------------------------------
+Q6:
+
+p = int(input("enter principal amount: "))
+r = float(input("Enter Rate of Interest : "))
+t = int(input("Enter Time : "))
+
+s = p*r*t/100
+print("Simple Interest for the duration of ",t," years :",s)
+
+
+enter principal amount: 1000
+Enter Rate of Interest : 8.52
+Enter Time : 2
+Simple Interest for the duration of  2  years : 170.4
+
+---------------------------------------------------------------
+Q7:
+height = int(input("Enter Height in cm: "))
+
+
+
+feetdivision = height//30.48
+feetmodulus = height/30.48
+inch= ((feetmodulus - feetdivision)*30.48)/2.54
+
+
+print("Height in feet :",feetdivision," and inches : ",inch)
+
+
+
+=========== RESTART: H:/Python/Day 2/Day 2 Assignment/height&inch.py ===========
+Enter Height in cm: 181
+Height in feet : 5.0  and inches :  11.259842519685037
+
+
+----------------------------------------------------------------
+
+Q8:
+age = int(input("Enter Age: "))
+
+if(age >= 18):
+    print("Eligible for voting.")
+else:
+    print("Not Eligible for voting.")
+
+
+======== RESTART: H:/Python/Day 2/Day 2 Assignment/EligibleforVoting.py ========
+Enter Age: 18
+Eligible for voting.
+
+--------------------------------------------------------------
+Q9:
+n = int(input("Enter The Number: "))
+
+if n%7==0:
+    print("Divisible by 7.")
+else:
+    print("Not Divisible by 7.")
+
+
+=========== RESTART: H:/Python/Day 2/Day 2 Assignment/DivisibleBy7.py ==========
+Enter The Number: 15
+Not Divisible by 7.
+
+=========== RESTART: H:/Python/Day 2/Day 2 Assignment/DivisibleBy7.py ==========
+Enter The Number: 28
+Divisible by 7.
+
+--------------------------------------------------------------
+Q10:
+
+n = int(input("Enter The Number: "))
+
+if n%5==0:
+    print("Hello!!")
+else:
+    print("Not a Multiple of 5.")
+	
+=========== RESTART: H:/Python/Day 2/Day 2 Assignment/Multipleof5.py ===========
+Enter The Number: 5
+Hello!!
+
+=========== RESTART: H:/Python/Day 2/Day 2 Assignment/Multipleof5.py ===========
+Enter The Number: 33
+Not a Multiple of 5.
+
+-------------------------------------------------------------
+Q11:
+n = int(input("Enter The Number of units: "))
+charge = 0
+bill = 0
+i=0
+while i<=n:
+    if i==101:
+        charge = 5
+    elif i==201:
+        charge = 10
+
+    bill+=charge
+    i+=1
+
+print("units :",n," bill: ",bill)
+
+
+========= RESTART: H:/Python/Day 2/Day 2 Assignment/ElectricityBill.py =========
+Enter The Number of units: 150
+units : 150  bill:  250
+
+========= RESTART: H:/Python/Day 2/Day 2 Assignment/ElectricityBill.py =========
+Enter The Number of units: 350
+units : 350  bill:  2000
+
+--------------------------------------------------------------
+Q12:
+
+per=int(input("Enter Percentage: "))
+if per>90:
+    print("Grade A")
+elif per>80 and per<=90:
+    print("Grade B")
+elif per>=60 and per<=80:
+    print("Grade C")
+else:
+    print("Grade D")
+
+
+============== RESTART: H:/Python/Day 2/Day 2 Assignment/Grade.py ==============
+Enter Percentage: 99
+Grade A
+
+============== RESTART: H:/Python/Day 2/Day 2 Assignment/Grade.py ==============
+Enter Percentage: 55
+Grade D
+
+--------------------------------------------------------------
+Q13:
+
+print("""Road Tax Criteria:
+      cost price > 100000 - 15%
+      cost price > 50000 and <=100000 - 10%
+      cost price <= 50000 - 5%""")
+
+
+costprice=int(input("Enter cost Price: "))
+
+if costprice>100000:
+    print("Road tax on Bike: ",costprice*0.15)
+elif costprice>50000 and costprice <=100000:
+    print("Road tax on Bike: ",costprice*0.1)
+else:
+    print("Road tax on Bike: ",costprice*0.05)
+	
+============= RESTART: H:/Python/Day 2/Day 2 Assignment/RoadTax.py =============
+Road Tax Criteria:
+      cost price > 100000 - 15%
+      cost price > 50000 and <=100000 - 10%
+      cost price <= 50000 - 5%
+Enter cost Price: 11000
+Road tax on Bike:  550.0
+
+--------------------------------------------------------------
+Q14:
+year =int(input("Enter year: "))
+
+if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+    print("Leap year.")
+else:
+    print("Not a leap year")
+	
+============= RESTART: H:/Python/Day 2/Day 2 Assignment/LeapYear.py ============
+Enter year: 2004
+Leap year.
+
+==============================================================
+Q15:
+n= int(input("enter Number: "))
+
+match n:
+    case 1:
+        print("Sunday")
+    case 2:
+        print("Monday")
+    case 3:
+        print("Tuesday")
+    case 4:
+        print("Wednesday")
+    case 5:
+        print("Thursday")
+    case 6:
+        print("Friday")
+    case 7:
+        print("Saturday")
+    case _:
+        print("Invalid Input")
+
+=============== RESTART: H:/Python/Day 2/Day 2 Assignment/Days.py ==============
+enter Number: 2
+Monday
+
+=============== RESTART: H:/Python/Day 2/Day 2 Assignment/Days.py ==============
+enter Number: 8
+Invalid Input
+
+==============================================================
+Q16:
+side1 =int(input("Enter Side 1: "))
+side2 =int(input("Enter Side 2: "))
+side3 =int(input("Enter Side 3: "))
+
+if side1==side2==side3:
+    print("Equilateral Triangle")
+elif (side1==side2)or(side1==side3)or(side2==side3):
+    print("Isosceles Triangle")
+else:
+    print("Scalene Traingle")
+
+
+============= RESTART: H:/Python/Day 2/Day 2 Assignment/Traingle.py ============
+Enter Side 1: 5
+Enter Side 2: 4
+Enter Side 3: 5
+Isosceles Triangle
+
+============= RESTART: H:/Python/Day 2/Day 2 Assignment/Traingle.py ============
+Enter Side 1: 4
+Enter Side 2: 4
+Enter Side 3: 4
+Equilateral Triangle
+
+============= RESTART: H:/Python/Day 2/Day 2 Assignment/Traingle.py ============
+Enter Side 1: 6
+Enter Side 2: 8
+Enter Side 3: 9
+Scalene Traingle
+
+===============================================================
+
+Iterative statement assignment:
+-------------------------------
+Q1:
+no = int(input("Enter Number: "))
+
+a=1
+while a<=10:
+    print(a*no)
+    a+=1
+else:
+    print("Done with table printing")
+
+===================== RESTART: H:/Python/Day 2/Iterative.py ====================
+# Iterative Statement
+
+Enter Number: 2
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+Done with table printing
+---------------------------------------------------------------
+Q2:
+
+no = int(input("Enter Number: "))
+count=0
+a=1
+while a<=no:
+    count+=a
+    a+=1
+print("Sum of first ",no," natural number: ",count)
+
+
+=============== RESTART: H:/Python/Day 2/Day 2 Assignment/SumN.py ==============
+Enter Number: 3
+Sum of first  3  natural number:  6
+
+=============== RESTART: H:/Python/Day 2/Day 2 Assignment/SumN.py ==============
+Enter Number: 5
+Sum of first  5  natural number:  15
+
+=================================================================
+Q3:
+for i in range (2,16):
+    for k in range(1,11):
+        print(i*k,end=" ")
+    print()
+
+== RESTART: C:/Users/HP/AppData/Local/Programs/Python/Python313/table2to15.py ==
+2 4 6 8 10 12 14 16 18 20 
+3 6 9 12 15 18 21 24 27 30 
+4 8 12 16 20 24 28 32 36 40 
+5 10 15 20 25 30 35 40 45 50 
+6 12 18 24 30 36 42 48 54 60 
+7 14 21 28 35 42 49 56 63 70 
+8 16 24 32 40 48 56 64 72 80 
+9 18 27 36 45 54 63 72 81 90 
+10 20 30 40 50 60 70 80 90 100 
+11 22 33 44 55 66 77 88 99 110 
+12 24 36 48 60 72 84 96 108 120 
+13 26 39 52 65 78 91 104 117 130 
+14 28 42 56 70 84 98 112 126 140 
+15 30 45 60 75 90 105 120 135 150 
+
+=================================================================
+Q4:
+for i in range (1,11):
+    for k in range(2,11):
+        print(i*k,end=" ")
+    print()
+
+
+============ RESTART: H:/Python/Day 2/Day 2 Assignment/table2to10.py ===========
+2 3 4 5 6 7 8 9 10 
+4 6 8 10 12 14 16 18 20 
+6 9 12 15 18 21 24 27 30 
+8 12 16 20 24 28 32 36 40 
+10 15 20 25 30 35 40 45 50 
+12 18 24 30 36 42 48 54 60 
+14 21 28 35 42 49 56 63 70 
+16 24 32 40 48 56 64 72 80 
+18 27 36 45 54 63 72 81 90 
+20 30 40 50 60 70 80 90 100 
+
+=================================================================
+Q5:
+str=input("enter name: ")
+for s in str:
+    print(s)
+
+
+============ RESTART: H:/Python/Day 2/Day 2 Assignment/nameprint.py ============
+enter name: JATIN
+J
+A
+T
+I
+N
+-----------------------------------------------------------------
+Q6:
+start = int(input("Enter start range : "))
+end = int(input("Enter end range: "))
+if start<end:
+    if start%2!=0:
+        for i in range(start,end,2):
+            print(i)
+    else:
+        print("Enter odd number.")
+else:
+    print('Starting range is more than ending range')
+
+
+============== RESTART: H:/Python/Day 2/Day 2 Assignment/Range.py ==============
+Enter start range : 11
+Enter end range: 23
+11
+13
+15
+17
+19
+21
+
+-----------------------------------------------------------------
+Q7:
+str = input("Enter String: ")
+
+reversed_str = ""
+
+for i in range(len(str) - 1, -1, -1):
+    reversed_str += str[i]
+
+print("Reversed String:", reversed_str)
+
+
+============= RESTART: H:/Python/Day 2/Day 2 Assignment/reverse.py =============
+Enter String: String
+Reversed String: gnirtS
+
+============= RESTART: H:/Python/Day 2/Day 2 Assignment/reverse.py =============
+Enter String: Jatin
+Reversed String: nitaJ
+
+
+==============================================================
+Q8:
+n = int(input("Enter Number: "))
+
+if n==0:
+    print(1)
+elif n==1:
+    print(1)
+elif n>1:
+    fact=1
+    i=1
+    while i<=n:
+        fact*=i
+        i+=1
+    print(fact)
+else:
+    print("Enter Positive value")
+	
+
+============ RESTART: H:/Python/Day 2/Day 2 Assignment/Factorial.py ============
+Enter Number: 4
+24
+
+============ RESTART: H:/Python/Day 2/Day 2 Assignment/Factorial.py ============
+Enter Number: 3
+6
+
+============ RESTART: H:/Python/Day 2/Day 2 Assignment/Factorial.py ============
+Enter Number: 5
+120
+
+============ RESTART: H:/Python/Day 2/Day 2 Assignment/Factorial.py ============
+Enter Number: -1
+Enter Positive value
+
+
+------------------------------------------------------------------------------
+
+Q9:
+#n=int(input("Enter Number: "))
+n=7
+i=1
+print("First 7 multiples of 7: ",end=" ")
+while i<=7:
+    print(i*7,end=" ")
+    i+=1
+
+=========== RESTART: H:/Python/Day 2/Day 2 Assignment/Multiplesof7.py ==========
+First 7 multiples of 7:  7 14 21 28 35 42 49 
+
+-------------------------------------------------------------------------------
+Q10:Pattern:
+10.1:
+no = int(input("Enter n of lines: "))
+
+for i in range(1,no+1):
+    for k in range(0,i):
+        print("* ",end=" ")
+    print()
+
+Enter n of lines: 5
+*  
+*  *  
+*  *  *  
+*  *  *  *  
+*  *  *  *  *
+
+10.2
+no = int(input("Enter number of lines: "))
+
+for i in range(1,no+1):
+    for k in range(i):
+        print(k+1 ," ",end=" ")
+    print()
+
+Enter number of lines: 5
+1   
+1   2   
+1   2   3   
+1   2   3   4   
+1   2   3   4   5   
+
+
+
+10.3:
+no = int(input("Enter number of lines: "))
+
+for i in range(1,no+1):
+    for k in range(0,i):
+        print(i ," ",end=" ")
+    print()
+	
+============= RESTART: H:/Python/Day 2/Day 2 Assignment/pattern2.py ============
+Enter number of lines: 5
+1   
+2   2   
+3   3   3   
+4   4   4   4   
+5   5   5   5   5 
+
+10.4:
+no=int(input("Enter the number of lines: "))
+for i in range(1,no+1):
+    for sp in range(no,i,-1):
+        print(" ",end="")
+    for k in range(i):
+        print("* ",end="")
+    print()
+	
+Enter the number of lines: 5
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+
+10.5:
+for i in range(1,no+1):
+    for sp in range(no,i,-1):
+        print(" ",end="")
+    for k in range(i):
+        print("* ",end="")
+    print()
+	
+
+Enter number of lines: 5
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+
+10.6:
+
+no = int(input("Enter n of lines: "))
+count=1
+for i in range(1,no+1):
+    for k in range(0,i):
+        print(count,end=" ")
+        count+=1
+    print()
+	
+Enter n of lines: 5
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+
+========================================================================================
+Strings Assignment
+------------------
+
+Q1:
+
+str = input("Enter String: ")
+
+reversed_str = str[::-1]
+
+if str==reversed_str:
+    print("Pallindrome")
+else:
+    print("Not Pallindrome")
+	
+Enter String: SaaS
+Pallindrome
+
+=========== RESTART: H:/Python/Day 2/Day 2 Assignment/Pallindrome.py ===========
+Enter String: Acad
+Not Pallindrome
+
+-----------------------------------------------------------------------------------------
+Q2:
+
+str1 = input("Enter String: ")
+str2=''
+if len(str1)< 2:
+    print(str2)
+else:
+    s=str1[:2]+str1[-2:]
+    print(s)
+
+
+
+============= RESTART: H:/Python/Day 2/Day 2 Assignment/String2.py =============
+Enter String: tr
+trtr
+
+============= RESTART: H:/Python/Day 2/Day 2 Assignment/String2.py =============
+Enter String: t
+
+
+============= RESTART: H:/Python/Day 2/Day 2 Assignment/String2.py =============
+Enter String: Dhurandhar
+Dhar
+------------------------------------------------------------------------------------------
+Q3:
+name=input("Enter name : ")
+age= int(input("Enter Age: "))
+salary=float(input("Enter Salary: "))
+
+#1. %
+
+print("Hello My name is %s, my age is %d,and getting Salary %.2f"%(name,age,salary))
+
+#2 Format
+#2.1 Default
+
+print("1. Hello My name is {}, my age is {}, and getting Salary {}".format(name,age,salary))
+
+#2.2 Positional
+
+print("2. Hello My name is {0},my age is {1}, and getting Salary {2}".format(name,age,salary))
+
+#2.3 Keyword
+
+print("3. Hello My name is {n},my  age is {a}, and getting Salary {s}".format(n=name,a=age,s=salary))
+
+
+
+#3
+
+
+print(f"1. Hello My name is {name}, my age is {age}, and getting Salary {salary}")
+
+
+==== RESTART: C:/Users/HP/AppData/Local/Programs/Python/Python313/String3.py ===
+Enter name : Jatin
+Enter Age: 26
+Enter Salary: 100000
+Hello My name is Jatin, my age is 26,and getting Salary 100000.00
+1. Hello My name is Jatin, my age is 26, and getting Salary 100000.0
+2. Hello My name is Jatin,my age is 26, and getting Salary 100000.0
+3. Hello My name is Jatin,my  age is 26, and getting Salary 100000.0
+1. Hello My name is Jatin, my age is 26, and getting Salary 100000.0
+
+
+=============================================================================================
+Q4:
+
+#           -7-6-5-4-3-2-1
+s="AlwaysThinkPosiTive"
+###012345678910
+#Output:
+
+print(s[5:6])
+
+print(s[-9:-8])
+
+print(s[5:8])
+
+print(s[::])
+
+print(s[1:])
+
+print(s[:8])
+
+print(s[::-1])
+
+print(s[-5:-2])
+
+print(s[:-2])
+
+print(s[-6:])
+
+print(s[::2])
+
+print(s[::-2])
+
+
+##output
+s
+k
+sTh
+AlwaysThinkPosiTive
+lwaysThinkPosiTive
+AlwaysTh
+eviTisoPknihTsyawlA
+iTi
+AlwaysThinkPosiTi
+siTive
+AwyTikoiie
+eiiokiTywA
+
+
+	

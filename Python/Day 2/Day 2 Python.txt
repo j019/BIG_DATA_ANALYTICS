@@ -1,0 +1,461 @@
+============
+Day 2 Python
+============
+
+print("Hello World!!")
+
+a=int(input("Enter Number: "))
+if a>0:
+    print("a is +ve")
+else:
+    print("a is -ve")
+	
+============ RESTART: H:/Python/Day 2/Conditional.py ===========
+Hello World!!
+Enter Number: -2
+a is -ve
+
+-----------------------------------------------------------------
+a,b,c=10,20,30
+
+if a>b and a>c:
+    print("A is greater")
+elif b>c:
+    print("B is greater")
+else:
+    print("C is greater")
+
+
+-----------------------------------------------------------------
+a,b,c=10,20,30
+if a>b:
+    if a>c:
+        print("A is greater")
+    else:
+        print("C is greater")
+elif b>c:
+    print("B is greater")
+else:
+    print("C is greater")
+
+
+============ RESTART: H:/Python/Day 2/Conditional.py ===========
+C is greater
+
+
+----------------------------------------------------------------
+# short hand if
+
+a = int(input("Enter no: "))
+
+# only execute for even
+if a%2==0:print("Even")
+
+print("Even")if a%2==0 else print("odd")
+
+# 7%2-> 1 i.e., true
+# 8%2-> 0 i.e., false
+print("Even")if a%2 else print("odd") 
+
+==================== RESTART: H:/Python/Day 2/Shorthandif.py ===================
+Enter no: 21
+odd
+Even
+
+-----------------------------------------------------------------
+
+
+## Match Case
+
+no = int(input("Enter number: "))
+
+match no:
+    case 1:
+        print("One")
+    case 2:
+        print("Two")
+    case _:
+        print("Invalid")
+
+
+
+===================== RESTART: H:/Python/Day 2/MatchCase.py ====================
+Enter number: 1
+One
+
+===================== RESTART: H:/Python/Day 2/MatchCase.py ====================
+Enter number: 6
+Invalid
+
+--------------------------------------------------------------------------------
+fruit ="banana"
+
+match fruit:
+    case "banana"|"Apple":
+        print("Regular fruits")
+    case "Mango"|"Avacado":
+        print("Special Fruits")
+    case _:
+        print("No fruits")
+
+===================== RESTART: H:/Python/Day 2/MatchCase.py ====================
+Regular fruits
+
+
+--------------------------------------------------------------------------------
+
+fruit ="Avacado"
+
+match fruit:
+    case "banana"|"Apple":
+        print("Regular fruits")
+    case "Mango"|"Avacado":
+        print("Special Fruits")
+    case _:
+        print("No fruits")
+
+===================== RESTART: H:/Python/Day 2/MatchCase.py ====================
+Special Fruits
+
+
+
+--------------------------------------------------------------------------------
+no = int(input("Enter Number: "))
+
+a=1
+while a<=10:
+    print(a*no)
+    a+=1
+else:
+    print("Done with table printing")
+	
+	
+===================== RESTART: H:/Python/Day 2/Iterative.py ====================
+# Iterative Statement
+
+Enter Number: 2
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+Done with table printing
+
+------------------------------------------------
+# break will not execute else
+
+no = int(input("Enter Number: "))
+
+a=1
+while a<=10:
+    print(a*no)
+    a+=1
+    if a==5:
+        break
+else:
+    print("Done with table printing")
+
+
+===================== RESTART: H:/Python/Day 2/Iterative.py ====================
+Enter Number: 7
+7
+14
+21
+28
+----------------------------------------------------
+
+lst=[1,2,3,4,5]
+
+for i in lst:
+    print(i,'=',i*i)
+
+
+
+for s in "Welcome":
+    print(s)
+	
+===================== RESTART: H:/Python/Day 2/Iterative.py ====================
+1 = 1
+2 = 4
+3 = 9
+4 = 16
+5 = 25
+W
+e
+l
+c
+o
+m
+e
+
+#range function 
+#stop value is mandatory
+
+range(1,10)
+range(1, 10)
+list(range(1,10))
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+list(range(10,1,-1))
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+list(range(10,0,-1))
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+list(range(10,0,-2))
+[10, 8, 6, 4, 2]
+---------------------------------------------------------------------------------
+# Nested for loop
+
+no = int(input("Enter n of lines: "))
+
+for i in range(1,no+1):
+    for k in range(0,i):
+        print("* ",end=" ")
+    print()
+
+no = int(input("Enter n of lines: "))
+
+for i in range(1,no+1):
+    for k in range(0,i):
+        print("* ",end=" ")
+    print()
+	
+-------------------------------------------------------------------------------
+# Nested Loop
+
+no = int(input("Enter number of lines: "))
+
+for i in range(1,no+1):
+    for k in range(0,i):
+        print(i ," ",end=" ")
+    print()
+
+
+==================== RESTART: H:/Python/Day 2/nestedloop.py ====================
+Enter number of lines: 5
+1   
+2   2   
+3   3   3   
+4   4   4   4   
+5   5   5   5   5   
+
+
+------------------------------------------------------------------------------
+# Nested Loop
+
+no = int(input("Enter number of lines: "))
+
+for i in range(1,no+1):
+    for k in range(i):
+        print(k+1 ," ",end=" ")
+    print()
+
+
+
+Enter number of lines: 5
+1   
+1   2   
+1   2   3   
+1   2   3   4   
+1   2   3   4   5   
+
+--------------------------------------------------------------------------------
+
+for i in range(1,no+1):
+    for sp in range(no,i,-1):
+        print(" ",end=" ")
+    for k in range(i):
+        print("* ",end="")
+    print()
+	
+Enter number of lines: 5
+        * 
+      * * 
+    * * * 
+  * * * * 
+* * * * * 
+
+==================================================================================
+
+for i in range(1,no+1):
+    for sp in range(no,i,-1):
+        print(" ",end="")
+    for k in range(i):
+        print("* ",end="")
+    print()
+	
+
+Enter number of lines: 5
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+
+-----------------------------------------------------------------------------------
+#tables in python
+
+for i in range (2,6):
+    for k in range(1,11):
+        print(i*k,end=" ")
+    print()
+
+print()
+
+for i in range (1,11):
+    for k in range(2,6):
+        print(i*k,end=" ")
+    print()
+	
+2 4 6 8 10 12 14 16 18 20 
+3 6 9 12 15 18 21 24 27 30 
+4 8 12 16 20 24 28 32 36 40 
+5 10 15 20 25 30 35 40 45 50 
+
+2 3 4 5 
+4 6 8 10 
+6 9 12 15 
+8 12 16 20 
+10 15 20 25 
+12 18 24 30 
+14 21 28 35 
+16 24 32 40 
+18 27 36 45 
+20 30 40 50
+
+
+-------------------------------------------------------------------------------------
+
+
+Strings
+#--------------------------------------
+
+s='Hello'
+
+s1="Welcome all 'student'"
+
+s2=''' Welcome all
+       to know it'''
+
+s3=""" Welcome all
+     'students'
+       to know it"""
+
+print(s)
+print(s1)
+print(s2)
+print(s3)
+
+#del s[0] error
+#s[0]='y' error
+
+s="Hi"
+print(s)
+
+del s
+
+#print(s)
+
+
+#--------------------------------------
+
+s="Welcome"
+
+#1
+print(s)
+
+print()
+#2
+for i in s:
+    print(i)
+
+print()
+#3
+print(s[0])
+print(s[1])
+
+print()
+
+#4
+for i in range(0,len(s)):
+    print(i, s[i])
+#--------------------------------------
+
+s="Welcome"
+s[4:]
+'ome'
+s[:3]
+'Wel'
+s[-1]
+'e'
+s[-3]
+'o'
+s[-5:-1]
+'lcom'
+s[-5:]
+'lcome'
+s[:-3]
+'Welc'
+s[::-1]
+'emocleW'
+s[1:-1]
+'elcom'
+s[1:10]
+'elcome'
+s[10]
+Traceback (most recent call last):
+  File "<pyshell#11>", line 1, in <module>
+    s[10]
+IndexError: string index out of range
+
+#--------------------------------------
+#string OPerators
+
+s="hi"
+s1="Hello"
+
+print(s+s1)
+print(s*3)
+print(s==s1)
+print(s>s1)
+
+print("He" in s1)
+
+#--------------------------------------
+
+#string Formating
+
+name="Ravi"
+age=32
+marks=86.6
+
+#1. %
+
+print("My name is %s, age is %d, Marks are %f"%(name,age,marks))
+
+#2 Format
+#2.1 Default
+
+print("1. My name is {}, age is {}, Marks are {}".format(name,age,marks))
+
+#2.2 Positional
+
+print("2. My name is {0}, age is {1}, Marks are {2}. Thanks {0}".format(name,age,marks))
+
+#2.3 Keyword
+
+print("3. My name is {n}, age is {a}, Marks are {m}".format(n=name,a=age,m=marks))
+
+
+
+#3
+
+
+print(f" 1. My name is {name}, age is {age}, Marks are {marks}, after 10 yrs my age is {age+10}")
+
+#--------------------------------------
+
+
